@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="[FAVICON.ICO]" type="image/x-icon">
+    <link rel="apple-touch-icon" href="[APPLE-TOUCH-ICON.PNG]">
+
+    <!-- Preload imagen de fondo (LCP) -->
+    <link rel="preload" as="image" href="[TU_URL_DE_IMAGEN]" fetchpriority="high">
+
+    <!-- URL Canónica -->
+    <link rel="canonical" href="[https://tudominio.com/]">
+
+    <!-- SEO Básico -->
+    <title>Rubén Roque | Consultor en Comunicación Política | Método P.U.L.S.O.</title>
+    <meta name="description" content="Consultor en Comunicación Política en Tabasco. Descubre el Método P.U.L.S.O. y aprende a leer las señales visuales que tu campaña emite sin saberlo. Contenido exclusivo en WhatsApp.">
+    <meta name="keywords" content="consultor político, comunicación política, narrativa visual, campañas electorales, Tabasco, Villahermosa, Rubén Roque, Método PULSO">
+    <meta name="author" content="Rubén Roque">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[https://tudominio.com/]">
+    <meta property="og:title" content="Rubén Roque | Consultor en Comunicación Política">
+    <meta property="og:description" content="Tu imagen te delata. Yo leo lo que dice sin que lo sepas. Únete a mi canal exclusivo de WhatsApp.">
+    <meta property="og:image" content="[URL_DE_TU_IMAGEN_PARA_REDES]">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Rubén Roque">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rubén Roque | Consultor en Comunicación Política">
+    <meta name="twitter:description" content="Tu imagen te delata. Yo leo lo que dice sin que lo sepas. Método P.U.L.S.O.">
+    <meta name="twitter:image" content="[URL_DE_TU_IMAGEN_PARA_REDES]">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rubén Roque",
+      "jobTitle": "Consultor en Comunicación Política",
+      "description": "Consultor especializado en comunicación política y narrativa visual con más de 10 años de experiencia en Tabasco. Creador del Método P.U.L.S.O.",
+      "url": "[https://tudominio.com/]",
+      "image": "[URL_DE_TU_IMAGEN_PARA_REDES]",
+      "knowsAbout": ["Comunicación Política", "Narrativa Visual", "Campañas Electorales", "Imagen Política"],
+      "areaServed": {
+        "@type": "State",
+        "name": "Tabasco",
+        "addressCountry": "MX"
+      },
+      "offers": {
+        "@type": "Service",
+        "name": "Método P.U.L.S.O.",
+        "description": "Sistema propio de lectura visual política: Posicionamiento, Urgencia, Lectura, Señal, Oportunidad.",
+        "areaServed": "MX"
+      }
+    }
+    </script>
+
+    <!-- Fuentes: preconnect primero, luego stylesheet (no bloquea render) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap">
+
+    <style>
+        :root {
+            --bg: #0B0B0F;
+            --card-bg: rgba(20, 20, 22, 0.8);
+            --accent: #C9A84C;
+            --accent-soft: #3D3A2E;
+            --text: #F5F5F7;
+            --muted: #B8B8C0;
+            --border: #2A2A2E;
+            --danger: #C96B6B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-image: url('[TU_URL_DE_IMAGEN]');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(6px) grayscale(1) brightness(0.4);
+            z-index: -1;
+            transform: scale(1.1);
+        }
+
+        .scroll-container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px 80px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .card {
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            padding: 60px 48px;
+            text-align: center;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .accent-badge {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 14px;
+            color: #FFFFFF;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #FFFFFF;
+        }
+
+        .subtitle {
+            font-size: 17px;
+            color: var(--muted);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .pain-box {
+            background: rgba(201, 107, 107, 0.1);
+            border-left: 3px solid var(--danger);
+            border-radius: 0 8px 8px 0;
+            padding: 18px 20px;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .pain-box p {
+            font-size: 15px;
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .method-block {
+            background: rgba(10, 10, 12, 0.8);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .method-title {
+            font-size: 14px;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .method-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .method-desc {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .benefits {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .benefit-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .benefit-text {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+
+        .benefit-text strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .social-proof {
+            font-size: 15px;
+            color: var(--muted);
+            margin: 20px 0;
+            line-height: 1.6;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            text-align: left;
+        }
+
+        .social-proof strong {
+            color: var(--text);
+        }
+
+        .form-group {
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            background: rgba(10, 10, 12, 0.9);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text);
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8B8C0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+        }
+
+        .urgency-box {
+            background: rgba(201, 168, 76, 0.1);
+            border: 1px solid var(--accent);
+            padding: 16px 18px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .cta-button {
+            display: inline-block;
+            width: 100%;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #C9A84C 0%, #E0C878 100%);
+            color: #0B0B0F;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-top: 12px;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #D4B45A 0%, #EBD88A 100%);
+            transform: translateY(-2px);
+        }
+
+        .privacy-note {
+            font-size: 12px;
+            color: #6B6B73;
+            margin-top: 16px;
+            line-height: 1.4;
+        }
+
+        .footer-note {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* Animación de pulso */
+        .pulse-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 2px solid rgba(201, 168, 76, 0.3);
+            background: transparent;
+            animation: pulse-expand 3s ease-out infinite;
+        }
+
+        .pulse-ring:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+        .pulse-ring:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            animation-delay: 0.6s;
+        }
+
+        .pulse-ring:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes pulse-expand {
+            0% {
+                width: 80px;
+                height: 80px;
+                opacity: 0.8;
+            }
+            100% {
+                width: 220px;
+                height: 220px;
+                opacity: 0;
+            }
+        }
+
+        /* Accesibilidad: skip link para teclado */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: #0B0B0F;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 100;
+            border-radius: 0 0 8px 0;
+            transition: top 0.2s;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        @media (max-width: 480px) {
+            .scroll-container {
+                max-width: 100%;
+                padding: 40px 16px 60px;
+            }
+            .card {
+                padding: 32px 24px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+            .method-name {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip link accesibilidad -->
+    <a class="skip-link" href="#cta-principal">Ir al formulario de registro</a>
+
+    <div class="background-image" role="presentation" aria-hidden="true"></div>
+
+    <div class="scroll-container">
+
+        <!-- SECCIÓN 1: HÉROE -->
+        <section class="section" aria-label="Presentación">
+            <div class="card">
+                <!-- Pulso decorativo -->
+                <div class="pulse-container" aria-hidden="true">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                </div>
+                <span class="accent-badge">RUBÉN ROQUE</span>
+                <h1>Tu imagen te delata.<br>Yo leo lo que dice sin que lo sepas.</h1>
+                <p class="subtitle">Consultor en Comunicación Política. No te voy a vender humo. Llevo más de una década leyendo el entorno político y sé exactamente qué hace que una imagen te proteja o te hunda.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: EL PROBLEMA -->
+        <section class="section" aria-label="El problema">
+            <div class="card">
+                <div class="pulse-container" aria-hidden="true">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                </div>
+                <span class="accent-badge">¿TE SUENA?</span>
+                <h2>Tu contenido grita cosas que tú no estás diciendo.</h2>
+                <p class="subtitle">Y tu adversario sí las está escuchando.</p>
+                <div class="pain-box">
+                    <p>He visto candidatos perder por una sola foto. Una. Con el encuadre equivocado, el gesto que no debía estar ahí, la persona incorrecta al lado... y nadie en su equipo se dio cuenta hasta que fue tarde.</p>
+                </div>
+                <p style="font-size:15px; color:var(--muted); text-align:left;">Mira, la política no es solo discursos. Es <span class="highlight">imagen</span>. Y la imagen, o te protege o te hunde. La mayoría de los políticos están tan metidos en el día a día que no ven lo que su contenido está comunicando de verdad.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: MÉTODO PULSO -->
+        <section class="section" aria-label="El Método P.U.L.S.O.">
+            <div class="card">
+                <div class="pulse-container" aria-hidden="true">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                </div>
+                <span class="accent-badge">MI SISTEMA</span>
+                <h2>El Método P.U.L.S.O.</h2>
+                <div class="method-block">
+                    <div class="method-title">POSICIONAMIENTO · URGENCIA · LECTURA · SEÑAL · OPORTUNIDAD</div>
+                    <div class="method-name" aria-label="Método PULSO">PULSO</div>
+                    <div class="method-desc">
+                        Un sistema propio de lectura visual política. Tomo el pulso de tu entorno digital, identifico las señales que tu imagen está emitiendo —a menudo sin que lo sepas— y diseño la estrategia que te posiciona un paso adelante. No es magia: es método, experiencia y colmillo político.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: BENEFICIOS -->
+        <section class="section" aria-label="Qué recibirás en el canal">
+            <div class="card">
+                <div class="pulse-container" aria-hidden="true">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                </div>
+                <span class="accent-badge">CANAL EXCLUSIVO DE WHATSAPP</span>
+                <h2>Contenido que no publico en redes.</h2>
+                <p class="subtitle">Aquí no se viene a recibir teoría de libros. Esto es trinchera.</p>
+                <div class="benefits" role="list">
+                    <div class="benefit-item" role="listitem">
+                        <span class="benefit-icon" aria-hidden="true">🔍</span>
+                        <span class="benefit-text"><strong>Lecturas del entorno político</strong> que te permiten anticiparte a crisis visuales y movimientos del adversario.</span>
+                    </div>
+                    <div class="benefit-item" role="listitem">
+                        <span class="benefit-icon" aria-hidden="true">🛡️</span>
+                        <span class="benefit-text"><strong>Análisis forense de imágenes reales</strong> (anonimizadas) para que aprendas a detectar qué dice tu contenido sin querer.</span>
+                    </div>
+                    <div class="benefit-item" role="listitem">
+                        <span class="benefit-icon" aria-hidden="true">📋</span>
+                        <span class="benefit-text"><strong>PDFs y checklists de autodiagnóstico</strong> que puedes aplicar directamente a tu campaña o gestión.</span>
+                    </div>
+                </div>
+                <div class="social-proof">
+                    <p><strong>+10 años</strong> leyendo el poder en Tabasco.<br>
+                    <strong>+50 campañas</strong> y gestiones analizadas.<br>
+                    He trabajado con <strong>diputados, senadores y equipos de campaña</strong>.<br>
+                    <span style="font-size:12px; color:#6B6B73;">(No revelo nombres. La confidencialidad es parte del Método P.U.L.S.O.)</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: FORMULARIO Y CTA -->
+        <section class="section" id="cta-principal" aria-label="Registro al canal">
+            <div class="card">
+                <div class="pulse-container" aria-hidden="true">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                </div>
+                <span class="accent-badge">ÚNETE AHORA</span>
+                <h2>Privacidad total. Sin juicios.</h2>
+                <p class="subtitle">El canal de WhatsApp es unidireccional: solo yo publico. Tú recibes el contenido sin que nadie vea tu número ni sepa que estás suscrito.</p>
+
+                <div class="urgency-box" role="alert" aria-live="polite">
+                    ⚠️ El canal es privado y solo aceptaré a los <strong>primeros 100 suscriptores</strong>. Cuando se complete el cupo, cierro el acceso. No sé cuándo volveré a abrirlo.
+                </div>
+
+                <div class="form-group">
+                    <label for="cargo">¿A qué cargo aspiras en 2027? <span style="color: var(--muted); font-weight: 400;">(opcional)</span></label>
+                    <select id="cargo" name="cargo" aria-describedby="cargo-hint">
+                        <option value="">Prefiero no decirlo</option>
+                        <option value="presidencia_municipal">Presidencia Municipal</option>
+                        <option value="diputacion_local">Diputación Local</option>
+                        <option value="diputacion_federal">Diputación Federal</option>
+                        <option value="senaduria">Senaduría</option>
+                        <option value="otro">Otro cargo</option>
+                        <option value="reeleccion">Reelección</option>
+                        <option value="equipo">Soy parte de un equipo de campaña</option>
+                    </select>
+                    <span id="cargo-hint" style="display:none;">Tu selección es anónima y solo se usa con fines estadísticos.</span>
+                </div>
+
+                <a href="https://whatsapp.com/channel/[TU_ID_DE_CANAL]"
+                   class="cta-button"
+                   id="cta-link"
+                   role="button"
+                   aria-label="Unirme al canal exclusivo de WhatsApp de Rubén Roque">
+                    QUIERO ENTRAR AL CANAL →
+                </a>
+                <p class="privacy-note">🔒 Al hacer clic serás redirigido a WhatsApp. Tu selección de cargo se guarda de forma anónima solo para fines estadísticos. No comparto datos con terceros.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p class="footer-note">Rubén Roque · Consultor en Comunicación Política · Método P.U.L.S.O. · Tabasco, México</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const ctaLink = document.getElementById('cta-link');
+        const cargoSelect = document.getElementById('cargo');
+
+        ctaLink.addEventListener('click', function () {
+            const cargo = cargoSelect.value;
+            if (cargo) {
+                try {
+                    localStorage.setItem('ruben_roque_cargo_2027', cargo);
+                } catch (e) { }
+            }
+        });
+    </script>
+</body>
+</html>
